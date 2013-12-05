@@ -1,0 +1,71 @@
+@nice-blue: #57d6c7;
+@light-blue: (@nice-blue + #111);
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: black;
+	&:hover {
+		color: black;
+	}
+	&:visited {
+		color: black;
+	}
+	&:active {
+		color:black;
+	}
+}
+
+.test-btn {
+	color: black;
+	background-color: @nice-blue;
+	
+	border: 1px solid @nice-blue;
+	border-radius: 5px;
+
+	font-weight: bold;
+	text-shadow: 1px 1px @nice-blue;
+	font-size: 18px !important;
+
+	padding: 10px 15px 11px !important;
+	cursor: pointer;
+
+	&:hover {
+		background-color: @light-blue;
+	}
+}
+
+.nav-bar {
+	text-align: center;
+}
+
+.title {
+	.nav-bar();
+}
+
+.about {
+	
+	margin: 0 auto;
+
+	width:  400px;
+	height: 100px;
+	
+	padding: 50px !important;
+
+	font-size: 20px !important;
+	font-weight: bold;
+	text-shadow: 1px 1px @nice-blue;
+
+	
+}
+
+.manifesto {
+	margin: 20px auto;
+	width: 700px;
+	&.item {
+		font-size: 16px !important;
+	}
+}

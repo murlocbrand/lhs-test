@@ -1,0 +1,52 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:active {
+  color: black;
+}
+.test-btn {
+  color: black;
+  background-color: #57d6c7;
+  border: 1px solid #57d6c7;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: 1px 1px #57d6c7;
+  font-size: 18px !important;
+  padding: 10px 15px 11px !important;
+  cursor: pointer;
+}
+.test-btn:hover {
+  background-color: #68e7d8;
+}
+.nav-bar {
+  text-align: center;
+}
+.title {
+  text-align: center;
+}
+.about {
+  margin: 0 auto;
+  width: 400px;
+  height: 100px;
+  padding: 50px !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  text-shadow: 1px 1px #57d6c7;
+}
+.manifesto {
+  margin: 20px auto;
+  width: 700px;
+}
+.manifesto.item {
+  font-size: 16px !important;
+}
