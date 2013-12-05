@@ -17,4 +17,11 @@ html
         });
       });
   body
-    block content
+  h1#backronym
+    a(href="http://localhost:3000")= title
+  block title
+  div.nav-bar
+    button.test-btn#manifesto Manifesto
+    button.test-btn#people People
+    button.test-btn#projects Projects
+  block content
