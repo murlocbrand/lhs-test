@@ -3,6 +3,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a {
+  text-decoration: none;
   color: black;
 }
 a:hover {
@@ -32,6 +33,9 @@ a:active {
   text-align: center;
 }
 .title {
+  text-align: center;
+}
+#backronym {
   text-align: center;
 }
 .about {
