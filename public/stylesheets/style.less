@@ -33,9 +33,9 @@ a {
 
 	font-weight: bold;
 	text-shadow: 1px 1px @nice-blue;
-	font-size: 18px !important;
+	font-size: 18px;
 
-	padding: 10px 15px 11px !important;
+	padding: 10px 15px 11px;
 	cursor: pointer;
 
 	&:hover {
@@ -56,7 +56,6 @@ a {
 }
 
 .about {
-	
 	margin: 0 auto;
 
 	width:  400px;
@@ -67,8 +66,33 @@ a {
 	font-size: 20px !important;
 	font-weight: bold;
 	text-shadow: 1px 1px @nice-blue;
+}
 
-	
+.member-area {
+	.nav-bar();
+	margin: 50px;
+}
+
+.member {
+	.test-btn();
+
+	font-weight: bold;
+	font-size: 18px;
+
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+
+	width: 200px;
+	height: auto;
+	padding: 5px;
+
+	background: @nice-blue;
+
+	border: 1px solid @light-blue;
+	border-radius: 5px;
+
+	margin: 5px;
 }
 
 .manifesto {
