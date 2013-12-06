@@ -1,7 +1,8 @@
 exports.getBackronym = function(){
-	var words = ["Lunds", "Hacker", "#space" ,
-				 'Large', 'Homo'  , 'Society',
-				 'Long' , 'Happy' , 'Smiley' ];
+	var words = ['Lunds',   'Hacker', '#space' ,
+				 'Large',   'Homo'  , 'Society',
+				 'Long' ,   'Happy' , 'Smiley' ,
+				 'Limited', 'Hyper' , 'Squid'  ];
 
 	var rows = words.length / 3;
 
