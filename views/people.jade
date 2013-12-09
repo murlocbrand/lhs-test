@@ -16,6 +16,7 @@ block title
   h2.title= 'People'
 
 block content
- div.member-area
-   - for (var x = 0; x < members.length; x+=2)
+ div.mainpage
+   div.member-area
+     - for (var x = 0; x < members.length; x+=2)
        +memberduo(members[x], (x + 1) < members.length ? members[x+1] : null);
