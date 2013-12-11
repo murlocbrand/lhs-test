@@ -1,4 +1,22 @@
 extends layout
+
+mixin memberduo(mema, memb)
+  div
+    if (mema)
+      a(href = mema.github)
+        div.member
+          p #{mema.name}
+    if (memb)
+      a(href = memb.github)
+        div.member
+          p #{memb.name}
+
+
 block title
   h2.title= 'People'
+
 block content
+ div.mainpage
+   div.member-area
+     - for (var x = 0; x < members.length; x+=2)
+       +memberduo(members[x], (x + 1) < members.length ? members[x+1] : null);
