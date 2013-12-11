@@ -3,28 +3,25 @@ html
   head
     title= 'LHS'
     link(rel='stylesheet', href='/stylesheets/style.css')
-  
+    script(src="/javascripts/jquery-1.10.2.min.js")
+    script.
+      $(document).ready(function(){
+        $("#projects").click(function() {
+          window.location.replace('/projects');
+        });
+        $("#people").click(function() {
+          window.location.replace('/people');
+        });
+        $("#manifesto").click(function() {
+          window.location.replace('/manifesto');
+        });
+      });
   body
   h1#backronym
-    a(href="http://localhost:3000")= title
+    a(href="/")= title
   block title
   div.nav-bar
     button.test-btn#manifesto Manifesto
     button.test-btn#people People
     button.test-btn#projects Projects
   block content
-
-script(src="/javascripts/jquery-1.10.2.min.js")
-script.
-      $(document).ready(function(){
-        $("#projects").click(function() {
-          window.location.replace('http://localhost:3000/projects');
-        });
-        $("#people").click(function() {
-          window.location.replace('http://localhost:3000/people');
-        });
-        $("#manifesto").click(function() {
-          window.location.replace('http://localhost:3000/manifesto');
-        });
-      });
-block scripts
