@@ -7,18 +7,18 @@ html
     script.
       $(document).ready(function(){
         $("#projects").click(function() {
-          window.location.replace('http://localhost:3000/projects');
+          window.location.replace('/projects');
         });
         $("#people").click(function() {
-          window.location.replace('http://localhost:3000/people');
+          window.location.replace('/people');
         });
         $("#manifesto").click(function() {
-          window.location.replace('http://localhost:3000/manifesto');
+          window.location.replace('/manifesto');
         });
       });
   body
   h1#backronym
-    a(href="http://localhost:3000")= title
+    a(href="/")= title
   block title
   div.nav-bar
     button.test-btn#manifesto Manifesto
