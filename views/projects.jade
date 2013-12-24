@@ -1,8 +1,16 @@
 extends layout
 
-block title
-  h2.title= 'Projects'
+block main-title
+  h2= 'Projects'
 block content
-
+ div.mainpage
+  div.member-area
+    div.project
+      p Karmakontot
+    div.project
+      p Scrotbox
+    div.project
+      p Backronymgen
+      
 block scripts
- script(src="/public/javascripts/projectfunctions.js")
+ script(src="/javascripts/projectfunctions.js")

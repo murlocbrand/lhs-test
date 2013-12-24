@@ -5,9 +5,12 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     
   body
-  h1#backronym
+   div.title
     a(href="/")= title
+    block main-title
+
   block title
+
   div.nav-bar
     button.test-btn#manifesto Manifesto
     button.test-btn#people People
@@ -16,7 +19,8 @@ html
   
   script(src="/javascripts/jquery-1.10.2.min.js")
   script.
-      $(document).ready(function(){
+      $(function(){
+        // Attaches on-click functions.
         $("#projects").click(function() {
           window.location.replace('/projects');
         });
@@ -26,6 +30,9 @@ html
         $("#manifesto").click(function() {
           window.location.replace('/manifesto');
         });
-      }); 
+
+        // Adds 'active' class to the selected page button.
+        $('#' + location.pathname.split("/")[1]).addClass('active');
+      });
   block scripts
   
