@@ -7,6 +7,9 @@
 @silver: silver;
 @dark-silver: (@silver - #222);
 
+@bg: #2b2b2b;
+@bg-plus: (@bg + #111);
+
 .rounded-corners (@radius: 5px) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
@@ -33,6 +36,12 @@
   box-shadow: inset @arguments;
 }
 
+.image-header {
+	margin: 0 auto;
+	max-width: 64px;
+	max-height: 64px;
+}
+
 .clickable(@color; @size: 18px;){
 	font-weight: bold;
 	text-shadow: 1px 1px @color;
@@ -50,33 +59,39 @@
 }
 
 body {
-  padding: 50px;
+  padding: 100px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   
-  background: url(/images/bg.jpg);
+  background-color: #2b2b2b;
+  //background: url(/images/bg.jpg);
   //background-color:silver;
 }
 
-a {
+#backronym a {
     text-decoration: none;
-
-	font-size: 48px;
+  
+    font-size: 48px;
+    @media only screen and (min-device-width: 768) {
+    	font-size: 96px;
+    }
+	
 	font-weight: bold;
 
-	color: #222;
-	text-shadow: 0px 2px 3px #555;
+	color: (#FFFFFF - #050505) !important;
+	text-shadow: 0px 2px 3px @bg-plus;
+	font-family: 'Lora', serif;
 
 	&:hover {
-		color: #222;
-		text-shadow: 0px 2px 3px #555;
+		color: #777777;
+		text-shadow: 0px 2px 3px @bg-plus;
 	}
 	&:visited {
-		color: #222;
-		text-shadow: 0px 2px 3px #555;
+		color: #777777;
+		text-shadow: 0px 2px 3px @bg-plus;
 	}
 	&:active {
-		color: #222;
-		text-shadow: 0px 2px 3px #555;
+		color: #777777;
+		text-shadow: 0px 2px 3px @bg-plus;
 	}
 }
 
@@ -93,42 +108,78 @@ a {
 	margin: 5px;
 
 	&.active {
+	.transition(all; 0s; ease);
 		.inset-box-shadow(0px; 0px; 8px; black);
 		background-color: @dark-silver;
 	}
 }
 
-.nav-bar {
-	display: inline-box;
-	margin: 20px auto;
-	width: 1024px;
-	padding: 10px;
+.nav {
+	margin: 40px auto;
+	max-width: 400px;
 
-	text-align: center;
+	font-family: 'Lora', serif !important;
+}
+.nav a {
+	padding: 12px 20px;
+	outline: none;
+	border: 1px solid #121212;
+	border-right: none;
+	background: -moz-linear-gradient(center top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.34) 100%) repeat scroll 0 0 transparent;
+	box-shadow: 0 2px 3px rgba(255, 255, 255, 0.05) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
+	color: #777777;
+	vertical-align: top;
+	text-decoration: none;
+	text-shadow: 0 -1px #0F0F0F;
+	font-size: 24px;
+	line-height: 21px;
+	cursor: pointer;
+
+    -webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-ms-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	transition: all .6s ease;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.nav a:hover {
+	color:#f6f6f6;
+}
+.nav a:first-child {
+	border-radius: 6px 0 0 6px;
+}
+.nav a:last-child {
+	border-radius: 0 6px 6px 0;
+}
+.nav a:active {
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.nav a.highlight {
+	background: -moz-linear-gradient(center top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.44) 100%) repeat scroll 0 0 transparent;
+	color: #f6f6f6;
+}
+
+.nav a:last-child {
+	border-right: 1px solid #121212;
 }
 
 .title {
 	text-align: center;
 
-	width: 1024px;
-	margin: 20px auto;
+	max-width: 1024px;
+	margin: 50px auto;
 	padding: 10px;
-	line-height: 1.0em;
 
 	text-shadow: 0px 1px 1px #4d4d4d;
     color: #222;
          
-}
-
-#backronym {
-    text-align: center;
-	width: 500px;
-	margin: auto auto;
-	text-align: center;
-	.rounded-corners(10px);
-	border: 2px dashed white;
-	background: @nice-red;
-	box-shadow: 0 0 0 4px @nice-red, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
 }
 
 .about {
@@ -136,20 +187,19 @@ a {
 	padding: 0px 20px;
 	line-height: 1.0em;
 
-	width:  1004px;
+	max-width:  400px;
 	height: 100px;
 
 	.rounded-corners(10px);
 	
 	text-align: center;
 
-	color: white;
+	color: (#FFFFFF - #050505);
 	background-color: @nice-red;
 
 	font-size: 20px;
-	font-weight: bold;
 
-	text-shadow: -1px -1px @nice-red;
+	
 	border: 2px dashed white;
 	box-shadow: 0 0 0 4px @nice-red, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
 }
@@ -193,15 +243,29 @@ a {
 
 .manifesto {
 	margin: 20px auto;
-	width: 700px;
-	border: 1px solid white;
-	
+	max-width: 400px;
+
+	font-family: 'Lora', serif;
+	color: @silver;
+
 	&.desc {
+		color: @dark-silver;
 		font-size: 16px !important;
+		font-family: 'Lucida Grande';
+		border: 1px solid @bg;
+		text-align: left;
+		padding: 21px;
 	}
 
 	&.item {
 		cursor: pointer;
+		text-align: center;
+		background: -moz-linear-gradient(center top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.34) 100%) repeat scroll 0 0 transparent;
+		box-shadow: 0 2px 3px rgba(255, 255, 255, 0.05) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
+
+		border: 1px solid #121212;
+		.rounded-corners(10px);
+		padding: 5px;
 	}
 }
 

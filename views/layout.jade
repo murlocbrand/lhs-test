@@ -3,18 +3,21 @@ html
   head
     title= 'LHS'
     link(rel='stylesheet', href='/stylesheets/style.css')
-    
+    link(href='http://fonts.googleapis.com/css?family=Lora', rel='stylesheet', type='text/css')
+
   body
-   div.title
+   div.image-header
+    img(src="http://www.lhs.nu/logo.png", width=64, height=64)
+   div#backronym.title
     a(href="/")= title
     block main-title
 
   block title
 
-  div.nav-bar
-    button.test-btn#manifesto Manifesto
-    button.test-btn#people People
-    button.test-btn#projects Projects
+  div.nav
+    a(href="/manifesto")#manifesto Manifesto
+    a(href="/people")#people People
+    a(href="/projects")#projects Projects
   block content
   
   script(src="/javascripts/jquery-1.10.2.min.js")
@@ -32,7 +35,7 @@ html
         });
 
         // Adds 'active' class to the selected page button.
-        $('#' + location.pathname.split("/")[1]).addClass('active');
+        $('#' + location.pathname.split("/")[1]).addClass('highlight');
       });
   block scripts
   
