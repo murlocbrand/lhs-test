@@ -6,6 +6,7 @@
 var backronym = require('./backronym');
 
 exports.index = function(req, res){
+	// !! INSERT DATABASE QUERY!!
 	var smeets = {name: "Axel Smeets", github: "https://github.com/MurlocBrand/"};
 	var cblgh = {name: "Alexander Cobleigh", github: "https://github.com/cblgh"};
 	var johnny = {name: "Johnny Hoang", github: "https://github.com/invalid"};

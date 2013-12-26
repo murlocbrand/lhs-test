@@ -1,15 +1,14 @@
 extends layout
 
 mixin memberduo(mema, memb)
-  div
     if (mema)
-      a(href = mema.github)
-        div.member
-          p #{mema.name}
+      span.member
+        a(href = mema.github).button.medium.black
+          span #{mema.name}
     if (memb)
-      a(href = memb.github)
-        div.member
-          p #{memb.name}
+      span.member
+        a(href = memb.github).button.medium.black
+          span #{memb.name}
 
 
 block content
