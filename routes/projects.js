@@ -11,7 +11,7 @@ exports.index = function(req, res){
     projects.push(
     {
         "title" : "Piratradio",
-        "desc" : "Lyssna på all gratismusik som finns, och lite till - kanske?",
+        "desc" : "Listen to user created playlists with tunes from bandcamp, soundcloud and youtube!",
         "authors" : "Axel Smeets<br>Alexander Cobleigh<br>Axel Mårtensson",
         "link" : "notyetpublished/piratrad.io"
     });
@@ -19,7 +19,7 @@ exports.index = function(req, res){
     projects.push(
     {
         "title" : "Backronym Generator",
-        "desc" : "Mannen har gjort det igen. Använder sig av Python 2.7",
+        "desc" : "The man has done it again, a python script that creates backronyms. (without slideToggle!!)",
         "authors" : "Alexander Cobleigh",
         "link" : "http://www.github.com/cblgh/backronym-gen.py"
     });
@@ -27,8 +27,7 @@ exports.index = function(req, res){
     projects.push(
     {
         "title" : "Hush",
-        "desc" : "Byter 90-tals tränden mot sent 2013, alla har appar."
-                + "<br>Appar som stör möten...",
+        "desc" : "Mute your phone during google calendar meetings, because they are that important.",
         "authors" : "Axel Mårtensson",
         "link" : "http://www.github.com/axelmartensson/hush"
     });
