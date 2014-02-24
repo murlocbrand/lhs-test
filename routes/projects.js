@@ -34,5 +34,14 @@ exports.index = function(req, res){
     });
 
 
+    projects.push(
+    {
+        "title" : "LD Jam",
+        "desc" : "LD JAM THEME GENERATOR TIMER AMG",
+        "authors" : "Alexander Cobleigh",
+        "link" : "http://jam.cblgh.org"
+    });
+
+
   res.render('projects', { title: backronym.getBackronym(), projects : projects });
 };
