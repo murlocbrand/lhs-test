@@ -15,9 +15,10 @@ work it
 @server
 =======
  1. do stuff
- 2. 'git pull'
- 2. 'tmux a -t 2'
- 3. 'forever app.js'
+ 2. 'tmux a -t 3'
+ 3. 'git pull'
+ 4. 'chown <user> public/stylesheets/style.*'
+ 5. 'forever app.js'
 
-Det kan behövas CTRL+C mellan steg 3 & 4.
+Döda servern mha CTRL+C efter steg 2.
 Vet inte om man behöver ändra git pull origin för andra användare.
