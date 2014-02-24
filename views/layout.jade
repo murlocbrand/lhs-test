@@ -1,8 +1,15 @@
-doctype 5
+doctype html
 html
   head
     title= 'LHS'
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    link(rel='stylesheet', href='/uikit/css/uikit.css')
+    link(rel='stylesheet', href='/uikit/css/uikit.almost-flat.css')
+
     link(rel='stylesheet', href='/stylesheets/style.css')
+
     link(href='http://fonts.googleapis.com/css?family=Lora', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Droid+Serif', rel='stylesheet', type='text/css')
 
@@ -15,17 +22,38 @@ html
 
   block title
 
-  div.nav
-    a(href="/manifesto")#manifesto Manifesto
-    a(href="/people")#people People
-    a(href="/projects")#projects Projects
-  block content
+  div(style="width: 100% !important; max-width: 100% !important; margin: 30px 0").uk-container
+    <div class="uk-grid uk-hidden-small" data-uk-grid-margin>
+    div.uk-width-1-6.uk-container-center.uk-text-center.uk-push-1-4.nav
+          a(href="/manifesto")#manifesto-large Manifesto
+    div.uk-width-1-6.uk-container-center.uk-text-center.uk-push-1-4.nav
+          a(href="/people")#people-large People
+    div.uk-width-1-6.uk-container-center.uk-text-center.uk-push-1-4.nav
+          a(href="/projects")#projects-large Projects
+    </div>
+
+    <div class="uk-grid uk-visible-small" data-uk-grid-margin>
+    div.uk-width-1-1.uk-text-center
+      div.uk-width-1-1.uk-container-center.nav
+          a(href="/manifesto")#manifesto-small Manifesto
+    div.uk-width-1-1.uk-text-center
+      div.uk-width-1-1.uk-container-center.nav
+          a(href="/people")#people-small People
+    div.uk-width-1-1.uk-text-center
+      div.uk-width-1-1.uk-container-center.nav
+          a(href="/projects")#projects-small Projects
+    </div>
+
+  div.uk-margin-bottom
+    block content
   
   script(src="/javascripts/jquery-1.10.2.min.js")
+  script(src="/uikit/js/uikit.js")
   script.
       $(function(){
         // Adds 'active' class to the selected page button.
-        $('#' + location.pathname.split("/")[1]).addClass('highlight');
+        $('#' + location.pathname.split("/")[1] + "-large").addClass('active');
+        $('#' + location.pathname.split("/")[1] + "-small").addClass('active');
       });
   block scripts
   

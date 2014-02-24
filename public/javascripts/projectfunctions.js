@@ -1,11 +1,9 @@
   $(document).ready(function () {
-    $('.manifesto.desc').hide(); //hide initialy
+    $('.manifesto-item p').hide(); //hide initialy
 
-    $('.manifesto.item').click(function () {
+    $('.manifesto-item').click(function () {
         var $this = $(this);
 
-        $(this).children('.manifesto.desc').slideToggle(200, function () {
-          
-        });
+        $(this).children('.manifesto-item p').slideToggle(200);
     });
 });

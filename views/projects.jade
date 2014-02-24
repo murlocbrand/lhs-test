@@ -1,13 +1,19 @@
 extends layout
 
+mixin createProject(project)
+  div.uk-width-medium-1-1
+    div.uk-panel.uk-panel-box.uk-width-medium-1-3.uk-container-center.project
+        a(href=project.link).uk-text-center
+          h1 #{project.title}
+        p.desc
+          != project.desc
+        p.uk-text-right.authors
+          != project.authors
+   
+
 block content
-  div.mainpage
-      span.project
-        a.button.large.red
-          span Karmakontot
-      span.project
-        a.button.large.green
-          span Scrotbox
-      span.project
-        a.button.large.blue
-          span Backronymgen
+    div(style="width: 100% !important; max-width: 100% !important;").uk-container
+      <div class="uk-grid" data-uk-grid-margin>
+      - for (var x = 0; x < projects.length; x++)
+        +createProject(projects[x]);
+      </div>

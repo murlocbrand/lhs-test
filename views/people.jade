@@ -1,18 +1,37 @@
 extends layout
 
+// Add badges of with appropriate icons for twitter & github
+mixin reolve_urls(urls)
+  - for (var i = 0; i < urls.length; i++)
+    - if (urls[i].indexOf("github") != -1)
+      a(href=urls[i] style="color: gray !important;").uk-icon-github
+    - else if (urls[i].indexOf("twitter") != -1)
+      a(href=urls[i] style="color: gray !important;").uk-icon-twitter
+    - else
+      a(href=urls[i] style="color: gray !important;").uk-icon-home
+
 mixin memberduo(mema, memb)
-    if (mema)
-      span.member
-        a(href = mema.github).button.medium.black
-          span #{mema.name}
-    if (memb)
-      span.member
-        a(href = memb.github).button.medium.black
-          span #{memb.name}
+  <div class="uk-grid" data-uk-grid-margin data-uk-grid-match="{target:'.uk-panel'}">
+  if (mema)
+      div.uk-width-medium-1-2
+        div(style="background-color: #2b2b2b;").uk-panel.uk-panel-box
+          div(style="font-size: 24px;").uk-panel-badge
+            +reolve_urls(mema.link);
+          div.member-name #{mema.name}
+          div.member-desc #{mema.note}
+  if (memb)
+      div.uk-width-medium-1-2
+        div(style="background-color: #2b2b2b;").uk-panel.uk-panel-box
+          div(style="font-size: 24px").uk-panel-badge
+            +reolve_urls(memb.link);
+          div.member-name #{memb.name}
+          div.member-desc #{memb.note}
+  </div>
 
 
 block content
- div.mainpage
-   div.member-area
-     - for (var x = 0; x < members.length; x+=2)
-       +memberduo(members[x], (x + 1) < members.length ? members[x+1] : null);
+  <div class="uk-container uk-container-center">
+  div.member-area
+    - for (var x = 0; x < members.length; x+=2)
+      +memberduo(members[x], (x + 1) < members.length ? members[x+1] : null);
+  </article>

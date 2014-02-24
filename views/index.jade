@@ -1,8 +1,9 @@
 extends layout
 
 block content
-  div.about
-   div.about-item
-    p
-    | LHS is a ragtag band of programmers from Lund, 
-    | determined to create new things, useful and useless alike.
+  div(style="width: 100% !important; max-width: 100% !important;").uk-container
+    <div class="uk-grid" data-uk-grid-margin>
+    div.uk-width-medium-1-1.uk-text-center
+        div.uk-width-medium-1-2.uk-container-center.about
+            p.about-item.uk LHS is a ragtag band of programmers from <font color="#FFFF99">Lund</font>, determined to create new things, useful and useless alike.
+    </div>
