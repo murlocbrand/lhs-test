@@ -52,7 +52,7 @@ exports.index = function(req, res){
 		"var height = 300;" +  // this needs to be larger than the member div
 		"var width = 300;" + 
 
-		"var drop_size = 12;" + 
+		"var drop_size = 12;" + // pixels
 		"var columns = width/drop_size;" + 
 
 		"var chinese = 'ムタ123モラキ450シリエ6789スハヌトユABC二コクDEF';" + 

@@ -79,6 +79,17 @@ body {
 .about p {
   margin: 4px 4px;
 }
+.member-link a {
+  color: gray;
+}
+.member-link a:hover {
+  color: white;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
 .member-area {
   font-family: 'Droid Serif', serif;
   font-weight: 400;
