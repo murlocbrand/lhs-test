@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title= 'LHS'
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        link(rel='stylesheet', href='/uikit/css/uikit.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+        link(href='http://fonts.googleapis.com/css?family=Lora', rel='stylesheet', type='text/css')
+
+    body
+        div.image-header
+            img(src="http://www.lhs.nu/logo.png", width=64, height=64)
+
+        div.error-page.uk-margin-top
+            h1 #{project}
+            p This project has not yet been published!
+            a(href="/projects").uk-icon-arrow-circle-o-left.uk-icon-large
