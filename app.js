@@ -20,11 +20,8 @@ app.set('port', 1337);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(express.favicon());
+app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 app.use(express.json());
-
-app.use(express.urlencoded());
-app.use(express.methodOverride());
 
 app.use(app.router);
 

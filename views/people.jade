@@ -16,14 +16,14 @@ mixin memberduo(mema, memb)
       div.uk-width-medium-1-2
         div(style="background-color: #2b2b2b;").uk-panel.uk-panel-box
           div(style="font-size: 24px;").uk-panel-badge
-            +reolve_urls(mema.link);
+            +reolve_urls(mema.link)
           div.member-name #{mema.name}
           div.member-desc #{mema.note}
   if (memb)
       div.uk-width-medium-1-2
         div(style="background-color: #2b2b2b;").uk-panel.uk-panel-box
           div(style="font-size: 24px").uk-panel-badge
-            +reolve_urls(memb.link);
+            +reolve_urls(memb.link)
           div.member-name #{memb.name}
           div.member-desc #{memb.note}
   </div>
@@ -33,5 +33,5 @@ block content
   <div class="uk-container uk-container-center">
   div.member-area
     - for (var x = 0; x < members.length; x+=2)
-      +memberduo(members[x], (x + 1) < members.length ? members[x+1] : null);
+      +memberduo(members[x], (x + 1) < members.length ? members[x+1] : null)
   </article>
