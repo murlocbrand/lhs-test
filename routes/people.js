@@ -89,7 +89,7 @@ exports.index = function(req, res){
 	"</script>";
 
 	members.push(createMember(
-		"Axel Mårtenson",
+		"Axel Mårtensson",
 		["http://www.github.com/axelmartensson"],
 		"<script>$(function(){$('#marten').parent().parent().css('background', '-webkit-canvas(squares)');});</script>" + onelinerscriptformarten2 + "<p id='marten'>Self-proclaimed designer extraordinaire. With a profound respect for the 90s and the pillars behind modern programming: black & green.</p>"
 	));
