@@ -14,10 +14,17 @@ work it
 
 @server
 =======
- 1. do stuff
- 2. 'git pull'
- 2. 'tmux a -t 2'
- 3. 'forever app.js'
+ 1. do stuff locally
+ 2. 'wemux join www'
+ 3. 'wemux'
+ 4. 'sudo git pull'
+ 5. 'sudo chown <user> public/stylesheets/style.*'
+ 6. 'forever app.js' (OBS OBS ej sudo!)
 
-Det kan behövas CTRL+C mellan steg 3 & 4.
+Döda servern mha CTRL+C efter steg 3.
+
 Vet inte om man behöver ändra git pull origin för andra användare.
+
+Steg 4 behövs för att LESS ska kunna köra och uppdatera on-demand.
+
+Fundera på att ta bort det i production?
