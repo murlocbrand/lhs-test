@@ -44,7 +44,7 @@ exports.index = function(req, res){
 	members.push(createMember(
 		"Alexander Cobleigh",
 		["http://www.github.com/cblgh", "https://www.twitter.com/cblgh", "http://www.cblgh.org"],
-		"<a onclick='$(this).slideToggle();' style='color: white;'>Finish it... finish it with slideToggles :)</a>"
+		"<a onclick='$(this).slideToggle();' style='color: white;'>Idea engine, starter & literal fire that fuels projects until completion. The yin to Smeets yang.</a>"
 	));
 
 	// OOHOHOHOHOH I'm going insane over here :3:3

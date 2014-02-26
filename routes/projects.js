@@ -19,7 +19,7 @@ exports.index = function(req, res){
     projects.push(
     {
         "title" : "Backronym Generator",
-        "desc" : "The man has done it again, a python script that creates backronyms. (without slideToggle!!)",
+        "desc" : "A python script that generates backronyms. Descriptive title innit?",
         "authors" : "Alexander Cobleigh",
         "link" : "http://www.github.com/cblgh/backronym-gen.py"
     });
@@ -35,8 +35,8 @@ exports.index = function(req, res){
 
     projects.push(
     {
-        "title" : "LD Jam",
-        "desc" : "LD JAM THEME GENERATOR TIMER AMG",
+        "title" : "LD Theme Generator & Timer",
+        "desc" : "A mix between theme generator and timer, for all your game jam needs.",
         "authors" : "Alexander Cobleigh",
         "link" : "http://jam.cblgh.org"
     });
