@@ -18,6 +18,14 @@ exports.index = function(req, res){
 
     projects.push(
     {
+        "title" : "flaskpost",
+        "desc" : "Write letters and throw them out into the (digital) sea to be read by other people! (Or better than that, read others letters!)",
+        "authors" : "Axel Smeets<br>Alexander Cobleigh<br>",
+        "link" : "http:///flaskpost.lhs.nu"
+    });
+
+    projects.push(
+    {
         "title" : "Backronym Generator",
         "desc" : "The man has done it again, a python script that creates backronyms. (without slideToggle!!)",
         "authors" : "Alexander Cobleigh",
