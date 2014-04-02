@@ -12,15 +12,15 @@ exports.index = function(req, res){
     {
         "title" : "Piratradio",
         "desc" : "Listen to user created playlists with tunes from bandcamp, soundcloud and youtube!",
-        "authors" : "Axel Smeets<br>Alexander Cobleigh<br>Axel Mårtensson",
+        "authors" : "Alexander Cobleigh<br>Axel Smeets<br>Axel Mårtensson",
         "link" : "notyetpublished/piratrad.io"
     });
 
     projects.push(
     {
         "title" : "flaskpost",
-        "desc" : "Write letters and throw them out into the (digital) sea to be read by other people! (Or better than that, read others letters!)",
-        "authors" : "Axel Smeets<br>Alexander Cobleigh<br>",
+        "desc" : "Write letters and throw them out into the sea to be read by other people!",
+        "authors" : "Alexander Cobleigh<br>Axel Smeets",
         "link" : "http:///flaskpost.lhs.nu"
     });
 
